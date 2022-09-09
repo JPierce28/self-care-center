@@ -30,26 +30,43 @@ h1 {
   font-family: "Quicksand", sans-serif;
 }
 
-.message-box {
-  display: inline-flex;
+.select-message {
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
-  width: 550px;
-  height: 120px;
+  width: 35%;
+  height: 100px;
   align-items: center;
-  justify-content: space-between;
   border-radius: 10px;
-  margin-left: 30%;
+  margin-left: 33%;
+  align-content: space-between;
+}
+
+#user-choice {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  font-style: italic;
 }
 
 button {
-  display: inline-flex;
   background-color: #134d71;
   color: #ffffff;
-  align-self: center;
-  align-items: center;
-  justify-content: center;
   border-radius: 5px;
   height: 30px;
   width: 200px;
   font-family: "Quicksand", sans-serif;
+}
+
+.message-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 50%;
+  height: 150px;
+  align-items: center;
+  border-radius: 10px;
+  margin-left: 25%;
+  align-content: space-between;
+  margin-top: 10%;
 }
