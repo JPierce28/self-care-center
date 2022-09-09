@@ -14,7 +14,6 @@ body {
 
 header {
   color: #ffffff;
-  /* height: 15vh; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,4 +68,9 @@ button {
   margin-left: 25%;
   align-content: space-between;
   margin-top: 10%;
+}
+
+.meditate-icon {
+  height: 150px;
+  width: 70px;
 }
