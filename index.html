@@ -14,10 +14,10 @@
       </header>
       <article class="select-message">
         <div id="user-choice">
-          <input type="radio"></input>
-          <p>affirmation</p>
-          <input type="radio">
-          <p>mantra</p>
+          <input type="radio" id="affirmation" name="message" value="affirmation"></input>
+          <label for="affirmation">affirmation</label>
+          <input type="radio" id="mantra" name="message" value="mantra">
+          <label for="mantra">mantra</label>
         </div>
         <div>
           <button class="message-button">Recieve Message</button>
@@ -25,8 +25,9 @@
       </article>
       <article class="message-box">
         <div id="image">
-          <img class="meditate-icon" src="./assets/meditate.svg" alt="meditate">
+          <img id="meditate-icon" src="./assets/meditate.svg">
         </div>
+        <pre id="positive-message"></pre>
       </article>
     </section>
     <script type="text/javascript" src="main.js"></script>
