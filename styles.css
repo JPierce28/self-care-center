@@ -55,6 +55,7 @@ button {
   height: 30px;
   width: 200px;
   font-family: "Quicksand", sans-serif;
+  margin-top: 20%;
 }
 
 .message-box {
@@ -70,7 +71,12 @@ button {
   margin-top: 10%;
 }
 
-.meditate-icon {
+#meditate-icon {
   height: 150px;
   width: 70px;
+}
+
+#positive-message {
+  font-family: "Quicksand", sans-serif;
+  
 }
