@@ -1,5 +1,5 @@
-//variables here
 var messageButton = document.querySelector(".message-button");
+var deleteMessageButton = document.querySelector(".message-delete");
 var affirmationRadio = document.querySelector("#affirmation");
 var mantraRadio = document. querySelector("#mantra");
 var positiveMessage = document.querySelector("#positive-message");
@@ -37,24 +37,39 @@ var mantras = [
 "I am the sky, the rest is weather."]
 
 var currentMessage;
-//event listeners here
 messageButton.addEventListener("click", randomMessage);
+deleteMessageButton.addEventListener("click", deleteMessage);
+window.addEventListener("load", homeView);
 
-
-
-
-
+function homeView() {
+  document.getElementById("delete-message").hidden = true;
+};
 
 function randomMessage() {
-  var currentMessage = ""
-  document.getElementById("meditate-icon").style.display = "none"
+  var currentMessage = "";
+  document.getElementById("meditate-icon").style.display = "none";
+  document.getElementById("delete-message").hidden = false;
   if (mantraRadio.checked){
     var currentMessage = mantras[Math.floor(Math.random()*mantras.length)];
     positiveMessage.innerText = currentMessage;
-    console.log(currentMessage);
-  }
+  };
   if (affirmationRadio.checked) {
     var currentMessage = affirmations[Math.floor(Math.random()*affirmations.length)];
     positiveMessage.innerText = currentMessage;
-  }
+  };
+};
+
+function deleteMessage() {
+  for (var i = 0; i < mantras.length; i++){
+    if (positiveMessage.innerText === mantras[i]){
+    mantras.splice(i, 1);
+    positiveMessage.innerText = "That message has been deleted! Please select another message."
+    };
+  };
+  for (var i = 0; i < affirmations.length; i++){
+    if(positiveMessage.innerText === affirmations[i]){
+      affirmations.splice(i, 1);
+      positiveMessage.innerText = "That message has been deleted! Please select another message."
+    };
+  };
 };
